@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WinFF</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QToolBar" name="toolBar">
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <addaction name="actionAdd"/>
+      <addaction name="actionRemove"/>
+      <addaction name="actionClear"/>
+      <addaction name="actionPlay"/>
+      <addaction name="actionPreview"/>
+      <addaction name="actionConvert"/>
+      <addaction name="actionOptions"/>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="listWidgetFiles">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabOutputDetails">
+       <attribute name="title">
+        <string>Output Details</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelConvertTo">
+          <property name="text">
+           <string>Convert to:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboBoxConvertTo">
+          <item>
+           <property name="text">
+            <string>MP4</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>AVI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>MKV</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>MOV</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>FLV</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>WMV</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>MP3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>AAC</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>OGG</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="labelPreset">
+          <property name="text">
+           <string>Preset:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboBoxPreset">
+          <item>
+           <property name="text">
+            <string>MP4 720p</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>MP4 1080p</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="labelOutputFolder">
+          <property name="text">
+           <string>Output Folder:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLineEdit" name="lineEditOutputFolder"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonOpen">
+            <property name="text">
+             <string>Open</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="checkBoxUseSourceFolder">
+          <property name="text">
+           <string>Use Source Folder</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabVideo">
+       <attribute name="title">
+        <string>Video</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tabAudio">
+       <attribute name="title">
+        <string>Audio</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tabCrop">
+       <attribute name="title">
+        <string>Crop</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tabTime">
+       <attribute name="title">
+        <string>Time</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tabFFmpeg">
+       <attribute name="title">
+        <string>FFmpeg</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionAdd">
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="actionRemove">
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="text">
+    <string>Play</string>
+   </property>
+  </action>
+  <action name="actionPreview">
+   <property name="text">
+    <string>Preview</string>
+   </property>
+  </action>
+  <action name="actionConvert">
+   <property name="text">
+    <string>Convert</string>
+   </property>
+  </action>
+  <action name="actionOptions">
+   <property name="text">
+    <string>Options</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
