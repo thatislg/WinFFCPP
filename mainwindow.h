@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QProcess>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,6 +20,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QProcess *ffmpegProcess;
 
 private slots:
     void openFile();
@@ -38,5 +40,7 @@ private slots:
     void openOutputFolder();
     void updatePresets(int index); // Slot mới để cập nhật preset
     void onUseSourceFolderChanged(int state); // Slot mới cho checkbox
+    void onFileSelectionChanged(); // Slot mới cho sự kiện chọn tệp
+    void onConvertFinished(int exitCode, QProcess::ExitStatus exitStatus); // Slot xử lý khi FFmpeg hoàn tất
 };
 #endif // MAINWINDOW_H
